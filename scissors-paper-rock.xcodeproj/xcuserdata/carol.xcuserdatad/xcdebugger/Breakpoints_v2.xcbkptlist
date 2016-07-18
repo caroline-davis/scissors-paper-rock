@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "scissors-paper-rock/AppDelegate.swift"
+            timestampString = "490515284.83186"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "scissors_paper_rock.AppDelegate.__deallocating_deinit"
+                  moduleName = "scissors-paper-rock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carol/Desktop/iOS_Developer/scissors-paper-rock/scissors-paper-rock/AppDelegate.swift"
+                  timestampString = "490515284.834466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "scissors_paper_rock.AppDelegate.init () -&gt; scissors_paper_rock.AppDelegate"
+                  moduleName = "scissors-paper-rock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carol/Desktop/iOS_Developer/scissors-paper-rock/scissors-paper-rock/AppDelegate.swift"
+                  timestampString = "490515284.834654"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "scissors-paper-rock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carol/Desktop/iOS_Developer/scissors-paper-rock/scissors-paper-rock/AppDelegate.swift"
+                  timestampString = "490515284.834749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

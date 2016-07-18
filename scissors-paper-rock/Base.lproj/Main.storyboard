@@ -8,7 +8,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainViewController" id="BYZ-38-t0r" customClass="mainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" id="BYZ-38-t0r" customClass="mainViewController" customModule="scissors_paper_rock" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,32 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esP-Rl-f1B" userLabel="Scissors Button">
-                                <rect key="frame" x="145" y="133" width="75" height="65"/>
-                                <state key="normal" image="Scissors"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-vB-hgh" userLabel="Paper Button">
-                                <rect key="frame" x="263" y="256" width="75" height="65"/>
-                                <state key="normal" image="Paper"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lets Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-PX-cow">
                                 <rect key="frame" x="263" y="412" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjA-Da-TDP" userLabel="Rock Button">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjA-Da-TDP" userLabel="Rock Button">
                                 <rect key="frame" x="341" y="133" width="124" height="65"/>
+                                <accessibility key="accessibilityConfiguration" label="rock"/>
                                 <state key="normal" image="Rock"/>
+                                <connections>
+                                    <segue destination="UHR-e1-BLQ" kind="show" identifier="results" id="52j-1p-zsl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-vB-hgh" userLabel="Paper Button">
+                                <rect key="frame" x="263" y="256" width="75" height="65"/>
+                                <accessibility key="accessibilityConfiguration" label="paper"/>
+                                <state key="normal" image="Paper"/>
+                                <connections>
+                                    <action selector="results:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUC-II-wBW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esP-Rl-f1B" userLabel="Scissors Button">
+                                <rect key="frame" x="145" y="133" width="75" height="65"/>
+                                <accessibility key="accessibilityConfiguration" label="scissors"/>
+                                <state key="normal" image="Scissors"/>
+                                <connections>
+                                    <action selector="results:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0A-cH-sQU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="paper" destination="Mni-vB-hgh" id="83z-n7-WUa"/>
-                        <outlet property="rock" destination="GjA-Da-TDP" id="hVz-67-qZv"/>
-                        <outlet property="scissors" destination="esP-Rl-f1B" id="ze5-Sn-112"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +57,7 @@
         <!--Second View Controller-->
         <scene sceneID="si3-OC-FBk">
             <objects>
-                <viewController storyboardIdentifier="secondViewController" id="UHR-e1-BLQ" customClass="secondViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondViewController" id="UHR-e1-BLQ" customClass="secondViewController" customModule="scissors_paper_rock" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SHa-r9-8jL"/>
                         <viewControllerLayoutGuide type="bottom" id="5ga-6w-GAV"/>
@@ -58,12 +65,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bd-wZ-D0M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAN-fC-4Qj">
+                                <rect key="frame" x="286" y="430" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain" destination="UHR-e1-BLQ" eventType="touchUpInside" id="NAs-5l-9z0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfW-1L-lxF">
+                                <rect key="frame" x="206" y="337" width="211" height="42"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="results" destination="dfW-1L-lxF" id="wbK-89-LmM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oo7-E0-Emr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="136"/>
+            <point key="canvasLocation" x="931" y="166"/>
         </scene>
     </scenes>
     <resources>

@@ -10,32 +10,24 @@ import UIKit
 
 class mainViewController: UIViewController {
     
-    @IBOutlet weak var scissors: UIButton!
-    @IBOutlet weak var paper: UIButton!
-    @IBOutlet weak var rock: UIButton!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func buttonPressed() {
-        enum roshamboMove {
-            case Scissors, Paper, Rock
-        }
-        //arc4random junk
-        
-        let myMove: roshamboMove.Paper
-        let yourMove: Int
-        var resultsMsg: ""
-        switch(myMove, yourMove){
-        case (.Rock, .Paper), (.Paper, .Rock):
-            resultsMsg = "Paper Wins"
-        
-            
+    // MARK: Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "results" {
+            let vc = segue.destinationViewController as! secondViewController
+            vc.userChoice = sender as! UIButton
         }
     }
-
+   
+    @IBAction func results(sender: UIButton) {
+        performSegueWithIdentifier("results", sender: sender)
+        
+    }
+    
 
 }
 

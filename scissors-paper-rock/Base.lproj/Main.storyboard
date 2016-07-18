@@ -17,21 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lets Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-PX-cow">
-                                <rect key="frame" x="263" y="412" width="74" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esP-Rl-f1B" userLabel="Scissors Button">
+                                <rect key="frame" x="107" y="133" width="75" height="65"/>
+                                <accessibility key="accessibilityConfiguration" label="scissors"/>
+                                <state key="normal" image="Scissors"/>
+                                <connections>
+                                    <action selector="results:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0A-cH-sQU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lets Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-PX-cow">
+                                <rect key="frame" x="263" y="411" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjA-Da-TDP" userLabel="Rock Button">
-                                <rect key="frame" x="341" y="133" width="124" height="65"/>
-                                <accessibility key="accessibilityConfiguration" label="rock"/>
-                                <state key="normal" image="Rock"/>
-                                <connections>
-                                    <segue destination="UHR-e1-BLQ" kind="show" identifier="results" id="52j-1p-zsl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-vB-hgh" userLabel="Paper Button">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-vB-hgh" userLabel="Paper Button">
                                 <rect key="frame" x="263" y="256" width="75" height="65"/>
                                 <accessibility key="accessibilityConfiguration" label="paper"/>
                                 <state key="normal" image="Paper"/>
@@ -39,20 +39,27 @@
                                     <action selector="results:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUC-II-wBW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esP-Rl-f1B" userLabel="Scissors Button">
-                                <rect key="frame" x="145" y="133" width="75" height="65"/>
-                                <accessibility key="accessibilityConfiguration" label="scissors"/>
-                                <state key="normal" image="Scissors"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjA-Da-TDP" userLabel="Rock Button">
+                                <rect key="frame" x="228" y="133" width="75" height="65"/>
+                                <accessibility key="accessibilityConfiguration" label="rock"/>
+                                <state key="normal" image="Rock"/>
                                 <connections>
-                                    <action selector="results:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0A-cH-sQU"/>
+                                    <segue destination="UHR-e1-BLQ" kind="show" identifier="results" id="52j-1p-zsl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ed3-PX-cow" firstAttribute="centerX" secondItem="Mni-vB-hgh" secondAttribute="centerX" id="ha0-mN-i4E"/>
+                            <constraint firstItem="Ed3-PX-cow" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k6i-H3-y0f"/>
+                            <constraint firstItem="Mni-vB-hgh" firstAttribute="leading" secondItem="Ed3-PX-cow" secondAttribute="leading" id="slq-Ug-g5Y"/>
+                            <constraint firstItem="Ed3-PX-cow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zqo-Px-duJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="248" y="201"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="si3-OC-FBk">
@@ -66,22 +73,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAN-fC-4Qj">
-                                <rect key="frame" x="286" y="430" width="71" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAN-fC-4Qj">
+                                <rect key="frame" x="265" y="334" width="71" height="30"/>
                                 <state key="normal" title="Play Again"/>
                                 <connections>
                                     <action selector="playAgain" destination="UHR-e1-BLQ" eventType="touchUpInside" id="NAs-5l-9z0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfW-1L-lxF">
-                                <rect key="frame" x="206" y="337" width="211" height="42"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfW-1L-lxF">
+                                <rect key="frame" x="180" y="228" width="241" height="48"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lAN-fC-4Qj" firstAttribute="centerY" secondItem="8bd-wZ-D0M" secondAttribute="centerY" id="CUy-Gb-JqJ"/>
+                            <constraint firstItem="lAN-fC-4Qj" firstAttribute="centerX" secondItem="8bd-wZ-D0M" secondAttribute="centerX" id="ema-7u-h5S"/>
+                            <constraint firstItem="dfW-1L-lxF" firstAttribute="centerX" secondItem="lAN-fC-4Qj" secondAttribute="centerX" id="laa-2F-ck6"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="results" destination="dfW-1L-lxF" id="wbK-89-LmM"/>

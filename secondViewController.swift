@@ -45,7 +45,6 @@ class secondViewController: UIViewController {
         print("comp move \(compMove)")
     }
     
-    
     // Goes back to the main page to play game again
     @IBAction private func playAgain() {
         dismissViewControllerAnimated(true, completion: nil)
